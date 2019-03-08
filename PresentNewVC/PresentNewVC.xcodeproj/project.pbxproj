@@ -13,6 +13,10 @@
 		0910C83922305CDF00B13127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0910C83522305CDE00B13127 /* Main.storyboard */; };
 		0955D1AD22305E09007F8C1A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955D1AC22305E09007F8C1A /* SignInViewController.swift */; };
 		0955D1AF2230618F007F8C1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955D1AE2230618F007F8C1A /* Constants.swift */; };
+		0955D1B222307555007F8C1A /* AlertViewController+PresentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955D1B122307555007F8C1A /* AlertViewController+PresentAlert.swift */; };
+		0955D1B42230786E007F8C1A /* WhatIsYourNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955D1B32230786E007F8C1A /* WhatIsYourNameViewController.swift */; };
+		0955D1B622307B41007F8C1A /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955D1B522307B41007F8C1A /* ShowViewController.swift */; };
+		0955D1B822307F98007F8C1A /* ModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0955D1B722307F98007F8C1A /* ModallyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		0910C83522305CDE00B13127 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0955D1AC22305E09007F8C1A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0955D1AE2230618F007F8C1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0955D1B122307555007F8C1A /* AlertViewController+PresentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+PresentAlert.swift"; sourceTree = "<group>"; };
+		0955D1B32230786E007F8C1A /* WhatIsYourNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsYourNameViewController.swift; sourceTree = "<group>"; };
+		0955D1B522307B41007F8C1A /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+		0955D1B722307F98007F8C1A /* ModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		0910C83722305CDF00B13127 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				0955D1B022307267007F8C1A /* Extensions */,
 				0955D1AE2230618F007F8C1A /* Constants.swift */,
 			);
 			path = Commons;
@@ -95,8 +104,19 @@
 			isa = PBXGroup;
 			children = (
 				0955D1AC22305E09007F8C1A /* SignInViewController.swift */,
+				0955D1B32230786E007F8C1A /* WhatIsYourNameViewController.swift */,
+				0955D1B522307B41007F8C1A /* ShowViewController.swift */,
+				0955D1B722307F98007F8C1A /* ModallyViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0955D1B022307267007F8C1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0955D1B122307555007F8C1A /* AlertViewController+PresentAlert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0955D1B222307555007F8C1A /* AlertViewController+PresentAlert.swift in Sources */,
+				0955D1B42230786E007F8C1A /* WhatIsYourNameViewController.swift in Sources */,
 				0955D1AD22305E09007F8C1A /* SignInViewController.swift in Sources */,
 				0910C823223058B400B13127 /* AppDelegate.swift in Sources */,
+				0955D1B822307F98007F8C1A /* ModallyViewController.swift in Sources */,
 				0955D1AF2230618F007F8C1A /* Constants.swift in Sources */,
+				0955D1B622307B41007F8C1A /* ShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

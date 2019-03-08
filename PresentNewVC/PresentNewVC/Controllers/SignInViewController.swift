@@ -21,22 +21,31 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let whatIsYourNameVC = segue.destination as? WhatIsYourNameViewController, let username = sender as? String else {
+            return
+        }
+        
+        whatIsYourNameVC.username = username
     }
-    */
 
     // MARK: Actions
 
     @IBAction func signIn(_ sender: UIButton) {
-
+        if let username = userTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty {
+            if (username == K.TestUser.Username) && (password == K.TestUser.Password) {
+                performSegue(withIdentifier: K.Segue.WhatIsYourName, sender: username)
+            } else {
+                let oKAction = UIAlertAction(title: K.AlertLogin.OKActionTitle, style: .default, handler: nil)
+                UIAlertController.presentAlert(title:  K.AlertLogin.Title, message: K.AlertLogin.MessageForNotLogin, actions: [oKAction], fromController: self)
+            }
+        } else {
+            let oKAction = UIAlertAction(title: K.AlertLogin.OKActionTitle, style: .default, handler: nil)
+            UIAlertController.presentAlert(title:  K.AlertLogin.Title, message: K.AlertLogin.Message, actions: [oKAction], fromController: self)
+        }
     }
 
 }
