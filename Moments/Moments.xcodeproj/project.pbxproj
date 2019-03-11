@@ -12,6 +12,7 @@
 		09A344202236F00A0013BF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A3441E2236F00A0013BF5C /* Main.storyboard */; };
 		09A344222236F00B0013BF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A344212236F00B0013BF5C /* Assets.xcassets */; };
 		09A344252236F00B0013BF5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A344232236F00B0013BF5C /* LaunchScreen.storyboard */; };
+		09A3442D2236F0D10013BF5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09A3442C2236F0D10013BF5C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		09A344212236F00B0013BF5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A344242236F00B0013BF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A344262236F00B0013BF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A3442C2236F0D10013BF5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		09A344192236F00A0013BF5C /* Moments */ = {
 			isa = PBXGroup;
 			children = (
+				09A3442C2236F0D10013BF5C /* GoogleService-Info.plist */,
 				09A3441A2236F00A0013BF5C /* AppDelegate.swift */,
 				09A3441C2236F00A0013BF5C /* ViewController.swift */,
 				09A3441E2236F00A0013BF5C /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A344252236F00B0013BF5C /* LaunchScreen.storyboard in Resources */,
+				09A3442D2236F0D10013BF5C /* GoogleService-Info.plist in Resources */,
 				09A344222236F00B0013BF5C /* Assets.xcassets in Resources */,
 				09A344202236F00A0013BF5C /* Main.storyboard in Resources */,
 			);
