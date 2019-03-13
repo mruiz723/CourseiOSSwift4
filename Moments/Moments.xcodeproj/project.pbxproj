@@ -7,24 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0945064F22398AE400808A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0945064622398AE300808A41 /* LaunchScreen.storyboard */; };
+		0945065022398AE400808A41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0945064722398AE300808A41 /* Main.storyboard */; };
+		0945065122398AE400808A41 /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945064822398AE300808A41 /* MomentCell.swift */; };
+		0945065222398AE400808A41 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945064A22398AE300808A41 /* SignOutViewController.swift */; };
+		0945065322398AE400808A41 /* MomentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945064B22398AE300808A41 /* MomentsTableViewController.swift */; };
+		0945065422398AE400808A41 /* NewMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945064C22398AE300808A41 /* NewMomentViewController.swift */; };
+		0945065522398AE400808A41 /* MomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945064D22398AE300808A41 /* MomentViewController.swift */; };
+		0945065622398AE400808A41 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945064E22398AE400808A41 /* SignInViewController.swift */; };
+		0945065922398EC700808A41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0945065822398EC700808A41 /* Constants.swift */; };
+		094506632239A10E00808A41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094506622239A10E00808A41 /* User.swift */; };
+		094506692239A49700808A41 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094506682239A49700808A41 /* APIClient.swift */; };
+		0945066D2239A9D100808A41 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0945066C2239A9D100808A41 /* AVFoundation.framework */; };
+		094506712239B3A200808A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094506702239B3A200808A41 /* Assets.xcassets */; };
 		09A3441B2236F00A0013BF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3441A2236F00A0013BF5C /* AppDelegate.swift */; };
-		09A3441D2236F00A0013BF5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3441C2236F00A0013BF5C /* ViewController.swift */; };
-		09A344202236F00A0013BF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A3441E2236F00A0013BF5C /* Main.storyboard */; };
-		09A344252236F00B0013BF5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A344232236F00B0013BF5C /* LaunchScreen.storyboard */; };
 		09A3442D2236F0D10013BF5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09A3442C2236F0D10013BF5C /* GoogleService-Info.plist */; };
-		09BE49632237097200D34394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BE49622237097200D34394 /* Assets.xcassets */; };
 		DF89C8445980B2CFC53A07F6 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26553BF940EC40B49AFF6D78 /* Pods_Moments.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0945064622398AE300808A41 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0945064722398AE300808A41 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0945064822398AE300808A41 /* MomentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentCell.swift; sourceTree = "<group>"; };
+		0945064A22398AE300808A41 /* SignOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		0945064B22398AE300808A41 /* MomentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentsTableViewController.swift; sourceTree = "<group>"; };
+		0945064C22398AE300808A41 /* NewMomentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMomentViewController.swift; sourceTree = "<group>"; };
+		0945064D22398AE300808A41 /* MomentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentViewController.swift; sourceTree = "<group>"; };
+		0945064E22398AE400808A41 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0945065822398EC700808A41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		094506622239A10E00808A41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		094506682239A49700808A41 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		0945066C2239A9D100808A41 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		094506702239B3A200808A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A344172236F00A0013BF5C /* Moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A3441A2236F00A0013BF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09A3441C2236F00A0013BF5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09A3441F2236F00A0013BF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09A344242236F00B0013BF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A344262236F00B0013BF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A3442C2236F0D10013BF5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		09BE49622237097200D34394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19F9CBC0427CD36EC838A2B3 /* Pods-Moments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moments/Pods-Moments.release.xcconfig"; sourceTree = "<group>"; };
 		26553BF940EC40B49AFF6D78 /* Pods_Moments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A82C966BBCD0DB1F075D66 /* Pods-Moments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moments/Pods-Moments.debug.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0945066D2239A9D100808A41 /* AVFoundation.framework in Frameworks */,
 				DF89C8445980B2CFC53A07F6 /* Pods_Moments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +61,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0945064422398AE300808A41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				094506622239A10E00808A41 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0945064522398AE300808A41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0945064622398AE300808A41 /* LaunchScreen.storyboard */,
+				0945064722398AE300808A41 /* Main.storyboard */,
+				0945064822398AE300808A41 /* MomentCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0945064922398AE300808A41 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0945064A22398AE300808A41 /* SignOutViewController.swift */,
+				0945064B22398AE300808A41 /* MomentsTableViewController.swift */,
+				0945064C22398AE300808A41 /* NewMomentViewController.swift */,
+				0945064D22398AE300808A41 /* MomentViewController.swift */,
+				0945064E22398AE400808A41 /* SignInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0945065722398AF400808A41 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				0945065822398EC700808A41 /* Constants.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		0945065D22399C3C00808A41 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				094506682239A49700808A41 /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		09A3440E2236F00A0013BF5C = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +128,14 @@
 		09A344192236F00A0013BF5C /* Moments */ = {
 			isa = PBXGroup;
 			children = (
-				09BE49622237097200D34394 /* Assets.xcassets */,
+				094506702239B3A200808A41 /* Assets.xcassets */,
+				0945065D22399C3C00808A41 /* Networking */,
+				0945064922398AE300808A41 /* Controllers */,
+				0945064422398AE300808A41 /* Models */,
+				0945064522398AE300808A41 /* Views */,
+				0945065722398AF400808A41 /* Commons */,
 				09A3442C2236F0D10013BF5C /* GoogleService-Info.plist */,
 				09A3441A2236F00A0013BF5C /* AppDelegate.swift */,
-				09A3441C2236F00A0013BF5C /* ViewController.swift */,
-				09A3441E2236F00A0013BF5C /* Main.storyboard */,
-				09A344232236F00B0013BF5C /* LaunchScreen.storyboard */,
 				09A344262236F00B0013BF5C /* Info.plist */,
 			);
 			path = Moments;
@@ -86,6 +153,7 @@
 		8E1CDB8AA45230F765B19E4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0945066C2239A9D100808A41 /* AVFoundation.framework */,
 				26553BF940EC40B49AFF6D78 /* Pods_Moments.framework */,
 			);
 			name = Frameworks;
@@ -152,10 +220,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A344252236F00B0013BF5C /* LaunchScreen.storyboard in Resources */,
 				09A3442D2236F0D10013BF5C /* GoogleService-Info.plist in Resources */,
-				09BE49632237097200D34394 /* Assets.xcassets in Resources */,
-				09A344202236F00A0013BF5C /* Main.storyboard in Resources */,
+				094506712239B3A200808A41 /* Assets.xcassets in Resources */,
+				0945065022398AE400808A41 /* Main.storyboard in Resources */,
+				0945064F22398AE400808A41 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +282,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Moments/Pods-Moments-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -223,6 +292,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -238,31 +308,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A3441D2236F00A0013BF5C /* ViewController.swift in Sources */,
 				09A3441B2236F00A0013BF5C /* AppDelegate.swift in Sources */,
+				0945065422398AE400808A41 /* NewMomentViewController.swift in Sources */,
+				0945065322398AE400808A41 /* MomentsTableViewController.swift in Sources */,
+				094506692239A49700808A41 /* APIClient.swift in Sources */,
+				0945065622398AE400808A41 /* SignInViewController.swift in Sources */,
+				0945065122398AE400808A41 /* MomentCell.swift in Sources */,
+				0945065222398AE400808A41 /* SignOutViewController.swift in Sources */,
+				0945065522398AE400808A41 /* MomentViewController.swift in Sources */,
+				0945065922398EC700808A41 /* Constants.swift in Sources */,
+				094506632239A10E00808A41 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		09A3441E2236F00A0013BF5C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09A3441F2236F00A0013BF5C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		09A344232236F00B0013BF5C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09A344242236F00B0013BF5C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		09A344272236F00B0013BF5C /* Debug */ = {
