@@ -10,6 +10,11 @@ import UIKit
 
 class MomentsTableViewController: UITableViewController {
 
+    // MARK: - Properties
+
+    var userManager: UserManager?
+    var moments: [Moment]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,29 +23,61 @@ class MomentsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        Moment.moments(completion: { (moments) in
+            self.moments = moments
+        })
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case K.Segue.moment:
+            guard let momentVC = segue.destination as? MomentViewController, let moment = sender as? Moment else {
+                return
+            }
+            momentVC.moment = moment
+        default:
+            return
+        }
+
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        guard let count = moments?.count else {
+            return 0
+        }
+        return count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifier.moment, for: indexPath) as? MomentCell, let moments = moments {
+
+            let moment = moments[indexPath.row]
+            cell.momentImageView.image = UIImage(named: moment.imageURLString)
+            cell.dateLabel.text = moment.date.stringFromDate()
+            cell.titleLabel.text = moment.title
+            return cell
+        }
 
         // Configure the cell...
-
-        return cell
+        return UITableViewCell()
     }
-    */
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let moment = moments?[indexPath.row] else {
+            return
+        }
+
+        performSegue(withIdentifier: K.Segue.moment, sender: moment)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,5 +123,7 @@ class MomentsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    // MARK: - Public Methods
 
 }

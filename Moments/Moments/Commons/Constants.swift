@@ -22,12 +22,28 @@ struct K {
 
     struct ProductionServer {
         static let baseURL = "https://api.medium.com/v1"
+        static let API_KEY = "AIzaSyCKCDt1Mw_hn5Qe-0BbxhYd9i3sL39yrfw"
     }
 
     struct APIParameterKey {
         static let password = "password"
         static let email = "email"
         static let nickname = "nickname"
+    }
+
+    struct AlertTitle {
+        static let signOut = "Sign Out"
+        static let signIn = "Sign Out"
+
+    }
+
+    struct Action {
+        static let okActionTitle = "OK"
+    }
+
+    struct Message {
+        static let someWentWrong = "Something went wrong. Try again!"
+        static let allFieldsAreRequired = "All fields are required!"
     }
 
 }

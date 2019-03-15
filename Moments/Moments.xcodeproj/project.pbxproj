@@ -20,6 +20,10 @@
 		094506692239A49700808A41 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094506682239A49700808A41 /* APIClient.swift */; };
 		0945066D2239A9D100808A41 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0945066C2239A9D100808A41 /* AVFoundation.framework */; };
 		094506712239B3A200808A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094506702239B3A200808A41 /* Assets.xcassets */; };
+		094506782239DB2C00808A41 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094506772239DB2C00808A41 /* Moment.swift */; };
+		094638C0223BE5C800392BFA /* AlertViewController+PresentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094638BF223BE5C800392BFA /* AlertViewController+PresentAlert.swift */; };
+		094638C2223C3A3B00392BFA /* Date+Formats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094638C1223C3A3B00392BFA /* Date+Formats.swift */; };
+		094638C4223C3AB700392BFA /* ActivityIndicatorView+ShowDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094638C3223C3AB700392BFA /* ActivityIndicatorView+ShowDismiss.swift */; };
 		09A3441B2236F00A0013BF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3441A2236F00A0013BF5C /* AppDelegate.swift */; };
 		09A3442D2236F0D10013BF5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09A3442C2236F0D10013BF5C /* GoogleService-Info.plist */; };
 		DF89C8445980B2CFC53A07F6 /* Pods_Moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26553BF940EC40B49AFF6D78 /* Pods_Moments.framework */; };
@@ -39,6 +43,10 @@
 		094506682239A49700808A41 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0945066C2239A9D100808A41 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		094506702239B3A200808A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		094506772239DB2C00808A41 /* Moment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		094638BF223BE5C800392BFA /* AlertViewController+PresentAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertViewController+PresentAlert.swift"; sourceTree = "<group>"; };
+		094638C1223C3A3B00392BFA /* Date+Formats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formats.swift"; sourceTree = "<group>"; };
+		094638C3223C3AB700392BFA /* ActivityIndicatorView+ShowDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicatorView+ShowDismiss.swift"; sourceTree = "<group>"; };
 		09A344172236F00A0013BF5C /* Moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A3441A2236F00A0013BF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09A344262236F00B0013BF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				094506622239A10E00808A41 /* User.swift */,
+				094506772239DB2C00808A41 /* Moment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +103,7 @@
 		0945065722398AF400808A41 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				094638BE223BE5C800392BFA /* Extensions */,
 				0945065822398EC700808A41 /* Constants.swift */,
 			);
 			path = Commons;
@@ -105,6 +115,16 @@
 				094506682239A49700808A41 /* APIClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		094638BE223BE5C800392BFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				094638BF223BE5C800392BFA /* AlertViewController+PresentAlert.swift */,
+				094638C1223C3A3B00392BFA /* Date+Formats.swift */,
+				094638C3223C3AB700392BFA /* ActivityIndicatorView+ShowDismiss.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		09A3440E2236F00A0013BF5C = {
@@ -281,6 +301,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Moments/Pods-Moments-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -291,6 +312,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -308,15 +330,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094638C0223BE5C800392BFA /* AlertViewController+PresentAlert.swift in Sources */,
+				094638C2223C3A3B00392BFA /* Date+Formats.swift in Sources */,
 				09A3441B2236F00A0013BF5C /* AppDelegate.swift in Sources */,
 				0945065422398AE400808A41 /* NewMomentViewController.swift in Sources */,
 				0945065322398AE400808A41 /* MomentsTableViewController.swift in Sources */,
 				094506692239A49700808A41 /* APIClient.swift in Sources */,
 				0945065622398AE400808A41 /* SignInViewController.swift in Sources */,
 				0945065122398AE400808A41 /* MomentCell.swift in Sources */,
+				094638C4223C3AB700392BFA /* ActivityIndicatorView+ShowDismiss.swift in Sources */,
 				0945065222398AE400808A41 /* SignOutViewController.swift in Sources */,
 				0945065522398AE400808A41 /* MomentViewController.swift in Sources */,
 				0945065922398EC700808A41 /* Constants.swift in Sources */,
+				094506782239DB2C00808A41 /* Moment.swift in Sources */,
 				094506632239A10E00808A41 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

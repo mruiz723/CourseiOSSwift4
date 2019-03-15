@@ -10,6 +10,10 @@ import UIKit
 
 class MomentViewController: UIViewController {
 
+    // MARK: - Properties
+
+    var moment: Moment?
+
     // MARK: - Outlets
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -22,6 +26,7 @@ class MomentViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupViews()
     }
     
 
@@ -34,6 +39,18 @@ class MomentViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    // MARK: - Public Methods
+
+    func setupViews() {
+        guard let moment = moment else {
+            return
+        }
+
+        dateLabel.text = moment.date.stringFromDate()
+        titleLabel.text = moment.title
+        momentImageView.image = UIImage(named: moment.imageURLString)
+    }
 
     // MARK: - Actions
 
