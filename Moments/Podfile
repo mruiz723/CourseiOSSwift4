@@ -11,5 +11,8 @@ target 'Moments' do
   pod 'Alamofire'
   pod 'SVProgressHUD'
   pod 'IQKeyboardManagerSwift'
+  pod 'SwiftLint'
+  pod 'Firebase/Storage'
+  pod 'Kingfisher'
 
 end

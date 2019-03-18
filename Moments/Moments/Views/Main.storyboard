@@ -31,16 +31,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKS-1s-Yk7">
-                                        <rect key="frame" x="50" y="30.5" width="100" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="qD0-Kc-iX3"/>
-                                        </constraints>
+                                        <rect key="frame" x="58.5" y="30.5" width="83.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="onc-vg-2Zu">
-                                        <rect key="frame" x="50" y="70.5" width="100" height="30"/>
+                                        <rect key="frame" x="58.5" y="70.5" width="83.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -177,22 +174,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f1i-Sf-Nad">
-                                <rect key="frame" x="37.5" y="94" width="300" height="301.5"/>
+                                <rect key="frame" x="37.5" y="114" width="300" height="301.5"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title For the moment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSh-Nv-diK">
-                                <rect key="frame" x="37.5" y="64" width="300" height="30"/>
+                                <rect key="frame" x="37.5" y="84" width="300" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e56-iH-Vt6">
-                                <rect key="frame" x="37.5" y="395.5" width="300" height="181"/>
+                                <rect key="frame" x="37.5" y="415.5" width="300" height="181"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydv-bj-d2A">
-                                <rect key="frame" x="37.5" y="576.5" width="300" height="30"/>
+                                <rect key="frame" x="37.5" y="596.5" width="300" height="30"/>
                                 <state key="normal" title="Create Moment"/>
                                 <connections>
                                     <action selector="createMoment:" destination="Vxr-ZM-niv" eventType="touchUpInside" id="CgK-9j-Wg9"/>
@@ -214,16 +211,23 @@
                             <constraint firstItem="e56-iH-Vt6" firstAttribute="centerX" secondItem="iYB-br-zx8" secondAttribute="centerX" id="j9H-pf-70f"/>
                             <constraint firstItem="f1i-Sf-Nad" firstAttribute="width" secondItem="MYX-Me-uT2" secondAttribute="width" multiplier="0.8" id="jQ9-UH-IQ3"/>
                             <constraint firstItem="f1i-Sf-Nad" firstAttribute="height" secondItem="MYX-Me-uT2" secondAttribute="height" multiplier="0.5" id="kjW-KY-rID"/>
-                            <constraint firstItem="DSh-Nv-diK" firstAttribute="top" secondItem="MYX-Me-uT2" secondAttribute="top" id="u7s-li-5sk"/>
+                            <constraint firstItem="DSh-Nv-diK" firstAttribute="top" secondItem="MYX-Me-uT2" secondAttribute="top" constant="20" id="u7s-li-5sk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MYX-Me-uT2"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Moment" id="ry9-gp-Xch">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Qoe-PU-d4o">
-                            <connections>
-                                <action selector="camera:" destination="Vxr-ZM-niv" id="O22-Si-9bR"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="bookmarks" id="8na-N1-uO2">
+                                <connections>
+                                    <action selector="photoLibrary:" destination="Vxr-ZM-niv" id="YTs-g3-rtO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="Qoe-PU-d4o">
+                                <connections>
+                                    <action selector="camera:" destination="Vxr-ZM-niv" id="O22-Si-9bR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="momentImageView" destination="f1i-Sf-Nad" id="5bc-Xh-BEk"/>
@@ -343,13 +347,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="August 11th 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMl-qw-7AI">
-                                <rect key="frame" x="37.5" y="64" width="300" height="21"/>
+                                <rect key="frame" x="37.5" y="84" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moment's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4z-dR-3XD">
-                                <rect key="frame" x="37.5" y="85" width="300" height="40"/>
+                                <rect key="frame" x="37.5" y="105" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6b5-m4-Mgw"/>
                                 </constraints>
@@ -358,12 +362,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bki-yC-8Ww">
-                                <rect key="frame" x="37.5" y="125" width="300" height="301.5"/>
+                                <rect key="frame" x="37.5" y="145" width="300" height="301.5"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uqo-vI-uC5">
-                                <rect key="frame" x="37.5" y="426.5" width="300" height="181"/>
+                                <rect key="frame" x="37.5" y="446.5" width="300" height="181"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -376,7 +379,7 @@
                             <constraint firstItem="Uqo-vI-uC5" firstAttribute="height" secondItem="Bki-yC-8Ww" secondAttribute="height" multiplier="0.6" id="NMA-nA-8vM"/>
                             <constraint firstItem="Uqo-vI-uC5" firstAttribute="width" secondItem="Bki-yC-8Ww" secondAttribute="width" id="Q8m-ec-3aE"/>
                             <constraint firstItem="R4z-dR-3XD" firstAttribute="top" secondItem="LMl-qw-7AI" secondAttribute="bottom" id="VKQ-MD-iOW"/>
-                            <constraint firstItem="LMl-qw-7AI" firstAttribute="top" secondItem="6KH-74-zi7" secondAttribute="top" id="WT3-hT-TRe"/>
+                            <constraint firstItem="LMl-qw-7AI" firstAttribute="top" secondItem="6KH-74-zi7" secondAttribute="top" constant="20" id="WT3-hT-TRe"/>
                             <constraint firstItem="Bki-yC-8Ww" firstAttribute="top" secondItem="R4z-dR-3XD" secondAttribute="bottom" id="cvP-7W-eBj"/>
                             <constraint firstItem="Bki-yC-8Ww" firstAttribute="width" secondItem="6KH-74-zi7" secondAttribute="width" multiplier="0.8" id="fyB-70-bO6"/>
                             <constraint firstItem="Uqo-vI-uC5" firstAttribute="centerX" secondItem="PYr-PM-le1" secondAttribute="centerX" id="i11-eB-FKg"/>

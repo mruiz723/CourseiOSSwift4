@@ -39,25 +39,31 @@ class SignOutViewController: UIViewController {
 
     @IBAction func signOut(_ sender: Any) {
         activityIndicator.show()
-        guard let email = emailTextField.text, email.count > 0, let password = passwordTextField.text, password.count > 0, let rPassword = repeatPasswordTextField.text, rPassword.count > 0, password == rPassword  else {
+        guard let email = emailTextField.text, email.count > 0, let password = passwordTextField.text,
+            password.count > 0, let rPassword = repeatPasswordTextField.text,
+            rPassword.count > 0, password == rPassword  else {
             self.activityIndicator.dismiss()
             activityIndicator.dismiss()
             let oKAction = UIAlertAction(title: K.Action.okActionTitle, style: .default, handler: nil)
-            UIAlertController.presentAlert(title: K.AlertTitle.signOut, message: K.Message.allFieldsAreRequired, actions: [oKAction], fromController: self)
+            UIAlertController.presentAlert(title: K.AlertTitle.signOut, message: K.Message.allFieldsAreRequired,
+                                           actions: [oKAction], fromController: self)
             return
         }
 
-        let userManager =  UserManager(email:email, password: password)
+        let userManager =  UserManager(email: email, password: password)
 
         DispatchQueue.global(qos: .userInteractive).async {
             userManager.signOut { [unowned self] (response) in
                 DispatchQueue.main.async {
                     self.activityIndicator.dismiss()
 
-                    guard let _ = response["user"] as? UserManager else {
+                    guard response["user"] as? UserManager != nil else {
                         let oKAction = UIAlertAction(title: K.Action.okActionTitle, style: .default, handler: nil)
-                        let message = response["error"] as? Error != nil ? (response["error"] as? Error)?.localizedDescription : K.Message.someWentWrong
-                        UIAlertController.presentAlert(title: K.AlertTitle.signOut, message: message!, actions: [oKAction], fromController: self)
+                        let message = response["error"] as? Error != nil
+                                        ? (response["error"] as? Error)?.localizedDescription
+                                        : K.Message.someWentWrong
+                        UIAlertController.presentAlert(title: K.AlertTitle.signOut, message: message!,
+                                                       actions: [oKAction], fromController: self)
                         return
                     }
 

@@ -8,6 +8,9 @@ PODS:
     - FirebaseAnalytics (= 5.7.0)
   - Firebase/CoreOnly (5.18.0):
     - FirebaseCore (= 5.3.1)
+  - Firebase/Storage (5.18.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.1.0)
   - FirebaseAnalytics (5.7.0):
     - FirebaseCore (~> 5.3)
     - FirebaseInstanceID (~> 3.6)
@@ -29,6 +32,10 @@ PODS:
     - FirebaseCore (~> 5.2)
     - GoogleUtilities/Environment (~> 5.2)
     - GoogleUtilities/UserDefaults (~> 5.2)
+  - FirebaseStorage (3.1.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleAppMeasurement (5.7.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -55,19 +62,24 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
   - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (5.2.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - SVProgressHUD (2.2.5)
+  - SwiftLint (0.31.0)
 
 DEPENDENCIES:
   - Alamofire
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Storage
   - IQKeyboardManagerSwift
+  - Kingfisher
   - SVProgressHUD
+  - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -77,13 +89,16 @@ SPEC CHECKSUMS:
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
   FirebaseCore: 52f851b30e11360f1e67cf04b1edfebf0a47a2d3
   FirebaseInstanceID: bd6fc5a258884e206fd5c474ebe4f5b00e21770e
+  FirebaseStorage: 29075f874c2b3cf61e5221a62c4ceefc809e5412
   GoogleAppMeasurement: 6cf307834da065863f9faf4c0de0a936d81dd832
   GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: ef8e3fac3d6d4a7064a6ba26aba1e9c2831969a1
+PODFILE CHECKSUM: 12240a92fa2c33ac173809afc490382f9589dbd9
 
 COCOAPODS: 1.4.0

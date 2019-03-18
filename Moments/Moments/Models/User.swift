@@ -26,7 +26,7 @@ class UserManager: NSObject {
 
     // MARK: - Class Methods
 
-    func signOut(completionHandler: @escaping completionHandler) {
+    func signOut(completionHandler: @escaping CompletionHandler) {
         APIClient.signOut(email: self.email, password: self.password) { response in
             guard let authDataResult = response["user"] as? AuthDataResult else {
                 completionHandler(response)
@@ -37,7 +37,7 @@ class UserManager: NSObject {
         }
     }
 
-    func signIn(completionHandler: @escaping completionHandler) {
+    func signIn(completionHandler: @escaping CompletionHandler) {
         APIClient.signIn(email: self.email, password: self.password) { response in
             guard let authDataResult = response["user"] as? AuthDataResult else {
                 completionHandler(response)

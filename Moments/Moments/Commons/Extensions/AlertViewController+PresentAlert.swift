@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 extension UIAlertController {
-    static func presentAlert(title: String, message: String, actions: [UIAlertAction], fromController: UIViewController) {
+    static func presentAlert(title: String, message: String,
+                             actions: [UIAlertAction],
+                             fromController: UIViewController) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         for action in actions {
