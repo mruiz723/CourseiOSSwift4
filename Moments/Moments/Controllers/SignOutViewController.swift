@@ -39,10 +39,10 @@ class SignOutViewController: UIViewController {
 
     @IBAction func signOut(_ sender: Any) {
         activityIndicator.show()
-        guard let email = emailTextField.text, email.count > 0, let password = passwordTextField.text,
-            password.count > 0, let rPassword = repeatPasswordTextField.text,
-            rPassword.count > 0, password == rPassword  else {
-            self.activityIndicator.dismiss()
+        guard let email = emailTextField.text, email.count > 0,
+            let password = passwordTextField.text, password.count >= 6,
+            let rPassword = repeatPasswordTextField.text,
+            rPassword.count >= 6, password == rPassword  else {
             activityIndicator.dismiss()
             let oKAction = UIAlertAction(title: K.Action.okActionTitle, style: .default, handler: nil)
             UIAlertController.presentAlert(title: K.AlertTitle.signOut, message: K.Message.allFieldsAreRequired,
@@ -68,6 +68,9 @@ class SignOutViewController: UIViewController {
                     }
 
                     self.delegate?.userDidSignOut(userManager: userManager)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                        self.dismiss(animated: true, completion: nil)
+                    })
                 }
             }
         }

@@ -14,11 +14,14 @@ typealias CompletionHandler = ([String: Any?]) -> Void
 
 struct APIClient {
     static func signOut(email: String, password: String, completionHandler: @escaping CompletionHandler) {
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            guard let user = user else {
+
+        Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
+            guard let authDataResult = authDataResult else {
                 completionHandler(["error": error ?? "Failed create new user"])
                 return
             }
+
+            let user = authDataResult.user
             completionHandler(["user": user])
         }
     }
@@ -71,15 +74,14 @@ struct APIClient {
     }
 
     static func moments(token: String, completionHandler: @escaping CompletionHandler) {
-        let URL = "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments).\(K.json)?\(K.APIParameterKey.auth)=\(token)"
+//        let URL = "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments).\(K.json)?\(K.APIParameterKey.auth)=\(token)"
 
         let defaultSession = URLSession(configuration: .default)
         var dataTask: URLSessionDataTask?
-
-        dataTask?.cancel()
+//
         if var urlComponents = URLComponents(string: "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments).\(K.json)") {
             urlComponents.query = "\(K.APIParameterKey.auth)=\(token)"
-
+//
             guard let url = urlComponents.url else { return }
             dataTask = defaultSession.dataTask(with: url, completionHandler: { data, response, error in
                 defer { dataTask = nil }
@@ -95,25 +97,26 @@ struct APIClient {
                     }
                 }
             })
+
+            dataTask?.resume()
         }
 
-        dataTask?.resume()
-
-//        Alamofire.request(URL, method: .get, parameters: [:],
-//                          encoding: JSONEncoding.default,
-//                          headers: [:]).validate().responseJSON { response in
-//            guard response.result.isSuccess else {
-//                completionHandler(["error": response.error])
-//                return
+//            Alamofire.request(url, method: .get, parameters: [:],
+//                              encoding: JSONEncoding.default,
+//                              headers: [:]).validate().responseJSON { response in
+//                                guard response.result.isSuccess else {
+//                                    completionHandler(["error": response.error])
+//                                    return
+//                                }
+//
+//                                guard let value = response.result.value as? [String: Any] else {
+//                                    completionHandler(["error": "Malformed data received"])
+//                                    return
+//                                }
+//
+//                                completionHandler(["moments": value])
+//
 //            }
-//
-//            guard let value = response.result.value as? [[String: Any]] else {
-//                completionHandler(["error": "Malformed data received"])
-//                return
-//            }
-//
-//            completionHandler(["moments": value])
-//
 //        }
     }
 

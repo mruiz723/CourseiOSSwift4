@@ -32,7 +32,6 @@ struct K {
 
     struct ProductionServer {
         static let baseURL = "https://moments-ef2e4.firebaseio.com/"
-        static let API_KEY = "AIzaSyCKCDt1Mw_hn5Qe-0BbxhYd9i3sL39yrfw"
         static let moments = "moments"
     }
 

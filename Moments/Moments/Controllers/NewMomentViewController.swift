@@ -10,6 +10,10 @@ import UIKit
 import AVFoundation
 import FirebaseStorage
 
+protocol NewMomentViewControllerDelegate: class {
+    func newMomentDidCreated()
+}
+
 class NewMomentViewController: UIViewController {
 
     // MARK: - Outlets
@@ -21,6 +25,7 @@ class NewMomentViewController: UIViewController {
     // MARK: - Properties
     var userManager: UserManager?
     let myPickerController = UIImagePickerController()
+    weak var delegate: NewMomentViewControllerDelegate?
 
     // MARK: - Lifecycle
 
@@ -95,6 +100,7 @@ class NewMomentViewController: UIViewController {
                                                 return
                                             }
                                             print("saved: \(saved)")
+                                            self.delegate?.newMomentDidCreated()
                                             self.navigationController?.popViewController(animated: true)
                         })
                     })

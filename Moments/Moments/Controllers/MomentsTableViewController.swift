@@ -19,10 +19,6 @@ class MomentsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         getMoments()
     }
 
@@ -40,6 +36,7 @@ class MomentsTableViewController: UITableViewController {
             guard let newMomentVC = segue.destination as? NewMomentViewController, let userManager = userManager else {
                 return
             }
+            newMomentVC.delegate = self
             newMomentVC.userManager = userManager
         default:
             return
@@ -155,4 +152,11 @@ extension MomentsTableViewController {
      }
      */
 
+}
+
+extension MomentsTableViewController: NewMomentViewControllerDelegate {
+    func newMomentDidCreated() {
+        getMoments()
+        tableView.reloadData()
+    }
 }

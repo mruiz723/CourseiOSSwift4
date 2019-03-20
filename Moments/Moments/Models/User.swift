@@ -28,12 +28,12 @@ class UserManager: NSObject {
 
     func signOut(completionHandler: @escaping CompletionHandler) {
         APIClient.signOut(email: self.email, password: self.password) { response in
-            guard let authDataResult = response["user"] as? AuthDataResult else {
+            guard let user = response["user"] as? User else {
                 completionHandler(response)
                 return
             }
-            self.user = authDataResult.user
-            completionHandler(["response": self])
+            self.user = user
+            completionHandler(["user": self])
         }
     }
 
