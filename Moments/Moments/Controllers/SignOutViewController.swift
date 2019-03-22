@@ -38,7 +38,8 @@ class SignOutViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func signOut(_ sender: Any) {
-        activityIndicator.show()
+        SVProgressHUD.show()
+//        activityIndicator.show()
         guard let email = emailTextField.text, email.count > 0,
             let password = passwordTextField.text, password.count >= 6,
             let rPassword = repeatPasswordTextField.text,
@@ -55,7 +56,8 @@ class SignOutViewController: UIViewController {
         DispatchQueue.global(qos: .userInteractive).async {
             userManager.signOut { [unowned self] (response) in
                 DispatchQueue.main.async {
-                    self.activityIndicator.dismiss()
+                    SVProgressHUD.dismiss()
+//                    self.activityIndicator.dismiss()
 
                     guard response["user"] as? UserManager != nil else {
                         let oKAction = UIAlertAction(title: K.Action.okActionTitle, style: .default, handler: nil)

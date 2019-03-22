@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Kingfisher
+import SVProgressHUD
 
 class MomentsTableViewController: UITableViewController {
 
@@ -47,11 +48,7 @@ class MomentsTableViewController: UITableViewController {
     // MARK: - Private Methods
 
     private func getMoments() {
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        SVProgressHUD.show()
         userManager?.user?.getIDToken(completion: { token, error in
             guard let token = token else {
                 // Handle error
@@ -67,6 +64,7 @@ class MomentsTableViewController: UITableViewController {
                 self.moments = data
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    SVProgressHUD.dismiss()
                 }
             })
         })

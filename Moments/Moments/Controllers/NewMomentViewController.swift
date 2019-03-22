@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import FirebaseStorage
+import SVProgressHUD
 
 protocol NewMomentViewControllerDelegate: class {
     func newMomentDidCreated()
@@ -47,6 +48,7 @@ class NewMomentViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func createMoment(_ sender: Any) {
+        SVProgressHUD.show()
         guard let title = titleTextField.text, let image = momentImageView.image,
             let imageData = image.pngData(), let descriptionMoment = momentTextView.text,
             let userManager = userManager, let email = userManager.user?.email else {
@@ -89,6 +91,8 @@ class NewMomentViewController: UIViewController {
                         Moment.newMoment(params: params,
                                          accessToken: token,
                                          completionHandler: { [unowned self] response in
+                                            SVProgressHUD.dismiss()
+                                            
                                             guard let saved = response["moment"] as? [String: Any] else {
                                                 let oKAction = UIAlertAction(title: K.Action.okActionTitle,
                                                                              style: .default,

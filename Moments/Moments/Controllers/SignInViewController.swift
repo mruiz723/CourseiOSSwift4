@@ -52,7 +52,8 @@ class SignInViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func signIn(_ sender: Any) {
-        activityIndicator.show()
+        SVProgressHUD.show()
+//        activityIndicator.show()
         guard let email = usernameTextField.text, email.count > 0,
             let password = passwordTextField.text, password.count > 0  else {
             activityIndicator.dismiss()
@@ -68,7 +69,8 @@ class SignInViewController: UIViewController {
         DispatchQueue.global(qos: .userInteractive).async {
             userManager.signIn {  [unowned self] (response) in
                 DispatchQueue.main.async {
-                    self.activityIndicator.dismiss()
+                    SVProgressHUD.dismiss()
+//                    self.activityIndicator.dismiss()
 
                     guard response["user"] != nil else {
                         let oKAction = UIAlertAction(title: K.Action.okActionTitle, style: .default, handler: nil)
