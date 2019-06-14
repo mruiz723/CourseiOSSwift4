@@ -11,6 +11,12 @@
 		AC622EFC22B312D400B78B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC622EFA22B312D400B78B3B /* Main.storyboard */; };
 		AC622EFE22B312D600B78B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC622EFD22B312D600B78B3B /* Assets.xcassets */; };
 		AC622F0122B312D600B78B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC622EFF22B312D600B78B3B /* LaunchScreen.storyboard */; };
+		AC622F0922B3374D00B78B3B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F0822B3374D00B78B3B /* SignInViewController.swift */; };
+		AC622F0C22B337C400B78B3B /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F0B22B337C400B78B3B /* SignOutViewController.swift */; };
+		AC622F0E22B3384100B78B3B /* MomentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F0D22B3384100B78B3B /* MomentsTableViewController.swift */; };
+		AC622F1022B3386500B78B3B /* NewMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F0F22B3386500B78B3B /* NewMomentViewController.swift */; };
+		AC622F1222B3386F00B78B3B /* MomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F1122B3386F00B78B3B /* MomentViewController.swift */; };
+		AC622F1522B33C8400B78B3B /* MomenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F1422B33C8400B78B3B /* MomenCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		AC622EFD22B312D600B78B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC622F0022B312D600B78B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC622F0222B312D600B78B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC622F0822B3374D00B78B3B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		AC622F0B22B337C400B78B3B /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		AC622F0D22B3384100B78B3B /* MomentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsTableViewController.swift; sourceTree = "<group>"; };
+		AC622F0F22B3386500B78B3B /* NewMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMomentViewController.swift; sourceTree = "<group>"; };
+		AC622F1122B3386F00B78B3B /* MomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentViewController.swift; sourceTree = "<group>"; };
+		AC622F1422B33C8400B78B3B /* MomenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomenCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				AC622EF622B312D400B78B3B /* AppDelegate.swift */,
-				AC622EFA22B312D400B78B3B /* Main.storyboard */,
+				AC622F1322B33C4D00B78B3B /* Views */,
 				AC622EFD22B312D600B78B3B /* Assets.xcassets */,
-				AC622EFF22B312D600B78B3B /* LaunchScreen.storyboard */,
 				AC622F0222B312D600B78B3B /* Info.plist */,
+				AC622F0A22B3375700B78B3B /* Controllers */,
 			);
 			path = Moments20191;
+			sourceTree = "<group>";
+		};
+		AC622F0A22B3375700B78B3B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC622F0822B3374D00B78B3B /* SignInViewController.swift */,
+				AC622F0B22B337C400B78B3B /* SignOutViewController.swift */,
+				AC622F0D22B3384100B78B3B /* MomentsTableViewController.swift */,
+				AC622F0F22B3386500B78B3B /* NewMomentViewController.swift */,
+				AC622F1122B3386F00B78B3B /* MomentViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC622F1322B33C4D00B78B3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC622EFA22B312D400B78B3B /* Main.storyboard */,
+				AC622EFF22B312D600B78B3B /* LaunchScreen.storyboard */,
+				AC622F1422B33C8400B78B3B /* MomenCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC622F0922B3374D00B78B3B /* SignInViewController.swift in Sources */,
+				AC622F0C22B337C400B78B3B /* SignOutViewController.swift in Sources */,
+				AC622F1222B3386F00B78B3B /* MomentViewController.swift in Sources */,
+				AC622F0E22B3384100B78B3B /* MomentsTableViewController.swift in Sources */,
+				AC622F1522B33C8400B78B3B /* MomenCell.swift in Sources */,
 				AC622EF722B312D400B78B3B /* AppDelegate.swift in Sources */,
+				AC622F1022B3386500B78B3B /* NewMomentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
