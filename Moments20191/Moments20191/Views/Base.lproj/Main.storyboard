@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGO-4S-38Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGO-4S-38Q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VSK-Wh-6h9">
-                                <rect key="frame" x="87.5" y="243.5" width="200" height="180.5"/>
+                                <rect key="frame" x="56.5" y="243.5" width="262.5" height="180.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moments!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3M-jg-muu">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
+                                        <rect key="frame" x="31" y="0.0" width="200" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="70H-rm-pwc"/>
                                         </constraints>
@@ -31,26 +31,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dlv-45-0G3">
-                                        <rect key="frame" x="0.0" y="30.5" width="200" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="r4C-KN-1iw"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="30.5" width="262.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tk5-kk-IH0">
-                                        <rect key="frame" x="0.0" y="70.5" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="262.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-FB-BbM">
-                                        <rect key="frame" x="76.5" y="110.5" width="47" height="30"/>
+                                        <rect key="frame" x="107.5" y="110.5" width="47" height="30"/>
                                         <state key="normal" title="Sign in"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k92-Pt-cgo">
-                                        <rect key="frame" x="46.5" y="150.5" width="107" height="30"/>
+                                        <rect key="frame" x="77.5" y="150.5" width="107" height="30"/>
                                         <state key="normal" title="Create Account"/>
                                         <connections>
                                             <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TlW-bL-bfB"/>
@@ -69,6 +66,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VSK-Wh-6h9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3gZ-uv-Htt"/>
+                            <constraint firstItem="Dlv-45-0G3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="IoF-wu-JTn"/>
                             <constraint firstItem="D2h-Tl-eLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZT9-56-kqh"/>
                             <constraint firstItem="VSK-Wh-6h9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dnF-a8-rs6"/>
                             <constraint firstItem="D2h-Tl-eLK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="esi-ce-uDH"/>
@@ -256,9 +254,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ata-9f-dvp">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ata-9f-dvp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Sign Out" id="is0-T2-kEy">
                                         <barButtonItem key="leftBarButtonItem" title="Close" id="xMf-Gz-Ysv"/>
@@ -309,6 +306,9 @@
                             <constraint firstItem="qJW-yD-q1M" firstAttribute="centerY" secondItem="XMt-8Z-V3a" secondAttribute="centerY" id="3Ka-Hi-Sv9"/>
                             <constraint firstItem="qJW-yD-q1M" firstAttribute="centerX" secondItem="XMt-8Z-V3a" secondAttribute="centerX" id="JTj-U1-4FM"/>
                             <constraint firstItem="WVV-wh-ISf" firstAttribute="centerX" secondItem="XMt-8Z-V3a" secondAttribute="centerX" id="fha-dV-L0n"/>
+                            <constraint firstItem="ata-9f-dvp" firstAttribute="top" secondItem="YUA-jk-DLR" secondAttribute="top" id="gc4-ym-d3c"/>
+                            <constraint firstItem="ata-9f-dvp" firstAttribute="leading" secondItem="YUA-jk-DLR" secondAttribute="leading" id="sX7-bo-4tI"/>
+                            <constraint firstItem="ata-9f-dvp" firstAttribute="trailing" secondItem="YUA-jk-DLR" secondAttribute="trailing" id="xn5-gA-C5Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YUA-jk-DLR"/>
                     </view>
@@ -385,8 +385,8 @@
                             <constraint firstItem="9gd-L2-CRM" firstAttribute="width" secondItem="Gdq-0e-KSx" secondAttribute="width" multiplier="0.8" id="nKj-r4-Fvc"/>
                             <constraint firstItem="Hma-FW-GqO" firstAttribute="top" secondItem="pZC-tQ-7EF" secondAttribute="bottom" id="nuf-Kr-fMU"/>
                             <constraint firstItem="9gd-L2-CRM" firstAttribute="width" secondItem="Hma-FW-GqO" secondAttribute="width" id="pOV-Nn-JDB"/>
-                            <constraint firstItem="9gd-L2-CRM" firstAttribute="leading" secondItem="pZC-tQ-7EF" secondAttribute="leading" id="tbJ-E9-FdH"/>
-                            <constraint firstItem="9gd-L2-CRM" firstAttribute="leading" secondItem="Hma-FW-GqO" secondAttribute="leading" id="uvm-N3-D4n"/>
+                            <constraint firstItem="pZC-tQ-7EF" firstAttribute="centerX" secondItem="sgx-Er-ftv" secondAttribute="centerX" id="sxv-0b-9WY"/>
+                            <constraint firstItem="Hma-FW-GqO" firstAttribute="centerX" secondItem="sgx-Er-ftv" secondAttribute="centerX" id="v0o-Dy-6fD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gdq-0e-KSx"/>
                     </view>

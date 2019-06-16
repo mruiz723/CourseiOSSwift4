@@ -2,6 +2,120 @@
 
 import UIKit
 
+struct Person {
+    let name: String
+    let address: String
+    let age: Int
+    let income: Double
+    let cars: [String]
+}
+
+let peopleArray = [Person]()// [ Person(name:"Santosh", address: "Pune, India", age:34, income: 100000.0, cars:["i20","Swift VXI"]),
+                   // Person(name: "John", address:"New York, US", age: 23, income: 150000.0, cars:["Crita", "Swift VXI"]),
+                    //Person(name:"Amit", address:"Nagpure, India", age:17, income: 200000.0, cars:Array())]
+
+
+enum RocketError: Error {
+    case insufficientFuel
+    case insufficientAstronauts(needed: Int)
+    case unknownError
+}
+
+// Approach 2
+let names = peopleArray.map({ $0.name })
+print(names)
+// Result: ["Santosh", "John", "Amit"]
+let cars = peopleArray.map({ $0.cars })
+print(cars)
+// Result: [["i20", "Swift VXI"], ["Crita", "Swift VXI"], []]
+
+func igniteRockets(fuel: Int, astronauts: Int) throws {
+
+    if fuel < 1000 {
+        throw RocketError.insufficientFuel
+    }
+    else if astronauts < 3 {
+        throw RocketError.insufficientAstronauts(needed: 3)
+    }
+
+    // Ignite rockets
+    print("3... 2... 1... IGNITION!!! LIFTOFF!!!")
+}
+
+func isIgniteRockets() -> String {
+    var response = ""
+    do {
+        try igniteRockets(fuel: 5000, astronauts: 1)
+        response = "Yes"
+    } catch {
+//        response = "No"
+        print(error)
+    }
+    return response
+}
+
+let response = isIgniteRockets()
+print(response as Any)
+
+//class Person {
+//    var name: String?
+//    var age: Int
+//    var pet: Pet?
+//
+//    init(name: String?, age: Int, pet: Pet? = nil) {
+//        self.name = name
+//        self.age = age
+//        self.pet = pet
+//    }
+//}
+//
+//class Pet {
+//    var name: String?
+//    var age: Int
+//    weak var owner: Person?
+//
+//    init(name: String?, age: Int, owner: Person) {
+//        self.name = name
+//        self.age = age
+//        self.owner = owner
+//    }
+//}
+//var persons: [Person] = [Person]()
+//var dataP = persons.map {$0.pet}
+
+var name: String?
+let hi = "Hello"
+
+if name == hi {
+    print(name ?? "nil")
+} else {
+    print("name is empty")
+}
+
+//var data: [Person] = [Person]()
+//for index in 0...5 {
+//    var p: Person
+//    if index % 2 == 0 {
+//        p = Person(name: "\(index)", age: index)
+//        p.pet = Pet(name: "Pipa", age: index, owner: p)
+//    }else {
+//        p = Person(name: "\(index)", age: index)
+//    }
+//    data.append(p)
+//}
+//
+//data.contains(where: { $0.age == 7})
+
+//var intervalDate = Date().timeIntervalSinceNow
+var date = Date()
+sleep(2)
+var intervalNSDate = date.timeIntervalSinceNow
+if intervalNSDate > -3 {
+    print("Yes")
+} else {
+    print("No")
+}
+
 var str = "Hello, playground"
 
 // Value type example (Enumerations, structures or tuples -   Array, String and Dictionary)
@@ -418,3 +532,9 @@ var testClassUnowned: TestClassUnowned? = TestClassUnowned()
 testClassUnowned = nil
 
 // https://stackoverflow.com/questions/24468336/how-to-correctly-handle-weak-self-in-swift-blocks-with-arguments
+
+func log(_ closure: @autoclosure () -> String) {
+    print(closure())
+}
+
+log("b") 
