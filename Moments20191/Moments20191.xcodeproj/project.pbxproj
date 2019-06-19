@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896FA53B5EB95C906D47D7F2 /* Pods_Moments20191.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2AA198EFCD25D1D74579F0 /* Pods_Moments20191.framework */; };
 		AC622EF722B312D400B78B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622EF622B312D400B78B3B /* AppDelegate.swift */; };
 		AC622EFC22B312D400B78B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC622EFA22B312D400B78B3B /* Main.storyboard */; };
 		AC622EFE22B312D600B78B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC622EFD22B312D600B78B3B /* Assets.xcassets */; };
@@ -17,6 +18,12 @@
 		AC622F1022B3386500B78B3B /* NewMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F0F22B3386500B78B3B /* NewMomentViewController.swift */; };
 		AC622F1222B3386F00B78B3B /* MomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F1122B3386F00B78B3B /* MomentViewController.swift */; };
 		AC622F1522B33C8400B78B3B /* MomenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622F1422B33C8400B78B3B /* MomenCell.swift */; };
+		AC71FAA622B9AE8E00A856AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71FAA522B9AE8E00A856AF /* User.swift */; };
+		AC71FAAB22B9C1C200A856AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71FAAA22B9C1C200A856AF /* Constants.swift */; };
+		AC71FAAE22B9C1F600A856AF /* AlertViewController+PresentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71FAAD22B9C1F600A856AF /* AlertViewController+PresentAlert.swift */; };
+		AC71FAB122B9C2FF00A856AF /* Date+Formats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71FAB022B9C2FF00A856AF /* Date+Formats.swift */; };
+		AC71FAB322B9C55A00A856AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC71FAB222B9C55A00A856AF /* GoogleService-Info.plist */; };
+		AC71FAB522B9CC1800A856AF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71FAB422B9CC1800A856AF /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,15 @@
 		AC622F0F22B3386500B78B3B /* NewMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMomentViewController.swift; sourceTree = "<group>"; };
 		AC622F1122B3386F00B78B3B /* MomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentViewController.swift; sourceTree = "<group>"; };
 		AC622F1422B33C8400B78B3B /* MomenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomenCell.swift; sourceTree = "<group>"; };
+		AC71FAA522B9AE8E00A856AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC71FAAA22B9C1C200A856AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC71FAAD22B9C1F600A856AF /* AlertViewController+PresentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+PresentAlert.swift"; sourceTree = "<group>"; };
+		AC71FAB022B9C2FF00A856AF /* Date+Formats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formats.swift"; sourceTree = "<group>"; };
+		AC71FAB222B9C55A00A856AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC71FAB422B9CC1800A856AF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		BD2AA198EFCD25D1D74579F0 /* Pods_Moments20191.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moments20191.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9CC32AD92F5F9088ED37A6 /* Pods-Moments20191.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments20191.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moments20191/Pods-Moments20191.debug.xcconfig"; sourceTree = "<group>"; };
+		F016AF9E1ADE55BCBCC13B67 /* Pods-Moments20191.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments20191.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moments20191/Pods-Moments20191.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +55,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				896FA53B5EB95C906D47D7F2 /* Pods_Moments20191.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EBF7A269C976FE73625E19B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD2AA198EFCD25D1D74579F0 /* Pods_Moments20191.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC622EEA22B312D400B78B3B = {
 			isa = PBXGroup;
 			children = (
 				AC622EF522B312D400B78B3B /* Moments20191 */,
 				AC622EF422B312D400B78B3B /* Products */,
+				B0F5E3D1A8308294AC4D6828 /* Pods */,
+				8EBF7A269C976FE73625E19B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,11 +91,15 @@
 		AC622EF522B312D400B78B3B /* Moments20191 */ = {
 			isa = PBXGroup;
 			children = (
+				AC71FAB222B9C55A00A856AF /* GoogleService-Info.plist */,
 				AC622EF622B312D400B78B3B /* AppDelegate.swift */,
 				AC622F1322B33C4D00B78B3B /* Views */,
 				AC622EFD22B312D600B78B3B /* Assets.xcassets */,
 				AC622F0222B312D600B78B3B /* Info.plist */,
 				AC622F0A22B3375700B78B3B /* Controllers */,
+				AC71FAA722B9AE9400A856AF /* Models */,
+				AC71FAAC22B9C1CF00A856AF /* Commons */,
+				AC71FAB622B9CC2000A856AF /* Network */,
 			);
 			path = Moments20191;
 			sourceTree = "<group>";
@@ -95,6 +126,49 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AC71FAA722B9AE9400A856AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC71FAA522B9AE8E00A856AF /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC71FAAC22B9C1CF00A856AF /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				AC71FAAA22B9C1C200A856AF /* Constants.swift */,
+				AC71FAAF22B9C1FD00A856AF /* Extensions */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		AC71FAAF22B9C1FD00A856AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC71FAAD22B9C1F600A856AF /* AlertViewController+PresentAlert.swift */,
+				AC71FAB022B9C2FF00A856AF /* Date+Formats.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC71FAB622B9CC2000A856AF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AC71FAB422B9CC1800A856AF /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B0F5E3D1A8308294AC4D6828 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA9CC32AD92F5F9088ED37A6 /* Pods-Moments20191.debug.xcconfig */,
+				F016AF9E1ADE55BCBCC13B67 /* Pods-Moments20191.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC622F0522B312D600B78B3B /* Build configuration list for PBXNativeTarget "Moments20191" */;
 			buildPhases = (
+				203E5F1BD9F97496C0760D1C /* [CP] Check Pods Manifest.lock */,
 				AC622EEF22B312D400B78B3B /* Sources */,
 				AC622EF022B312D400B78B3B /* Frameworks */,
 				AC622EF122B312D400B78B3B /* Resources */,
+				91BF668CCC1AB1863E804CDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC622F0122B312D600B78B3B /* LaunchScreen.storyboard in Resources */,
+				AC71FAB322B9C55A00A856AF /* GoogleService-Info.plist in Resources */,
 				AC622EFE22B312D600B78B3B /* Assets.xcassets in Resources */,
 				AC622EFC22B312D400B78B3B /* Main.storyboard in Resources */,
 			);
@@ -161,18 +238,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		203E5F1BD9F97496C0760D1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moments20191-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91BF668CCC1AB1863E804CDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Moments20191/Pods-Moments20191-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moments20191/Pods-Moments20191-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC622EEF22B312D400B78B3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC71FAB122B9C2FF00A856AF /* Date+Formats.swift in Sources */,
 				AC622F0922B3374D00B78B3B /* SignInViewController.swift in Sources */,
 				AC622F0C22B337C400B78B3B /* SignOutViewController.swift in Sources */,
 				AC622F1222B3386F00B78B3B /* MomentViewController.swift in Sources */,
 				AC622F0E22B3384100B78B3B /* MomentsTableViewController.swift in Sources */,
+				AC71FAA622B9AE8E00A856AF /* User.swift in Sources */,
 				AC622F1522B33C8400B78B3B /* MomenCell.swift in Sources */,
+				AC71FAAE22B9C1F600A856AF /* AlertViewController+PresentAlert.swift in Sources */,
 				AC622EF722B312D400B78B3B /* AppDelegate.swift in Sources */,
 				AC622F1022B3386500B78B3B /* NewMomentViewController.swift in Sources */,
+				AC71FAAB22B9C1C200A856AF /* Constants.swift in Sources */,
+				AC71FAB522B9CC1800A856AF /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +449,7 @@
 		};
 		AC622F0622B312D600B78B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9CC32AD92F5F9088ED37A6 /* Pods-Moments20191.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +467,7 @@
 		};
 		AC622F0722B312D600B78B3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F016AF9E1ADE55BCBCC13B67 /* Pods-Moments20191.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

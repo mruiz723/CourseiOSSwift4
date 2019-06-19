@@ -9,6 +9,9 @@
 import UIKit
 
 class MomentsTableViewController: UIViewController {
+    
+    // MARK: - Properties
+    var userManager: UserManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()

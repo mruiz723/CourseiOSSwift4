@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGO-4S-38Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGO-4S-38Q">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,12 +45,14 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-FB-BbM">
                                         <rect key="frame" x="107.5" y="110.5" width="47" height="30"/>
                                         <state key="normal" title="Sign in"/>
+                                        <connections>
+                                            <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqw-J6-dS1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k92-Pt-cgo">
                                         <rect key="frame" x="77.5" y="150.5" width="107" height="30"/>
                                         <state key="normal" title="Create Account"/>
                                         <connections>
-                                            <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TlW-bL-bfB"/>
                                             <segue destination="LLy-yn-uwH" kind="presentation" identifier="SignOut" id="m9o-Iy-IQm"/>
                                         </connections>
                                     </button>
@@ -59,23 +61,17 @@
                                     <constraint firstItem="tk5-kk-IH0" firstAttribute="width" secondItem="Dlv-45-0G3" secondAttribute="width" id="Ms6-Sh-QJt"/>
                                 </constraints>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="D2h-Tl-eLK">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VSK-Wh-6h9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3gZ-uv-Htt"/>
                             <constraint firstItem="Dlv-45-0G3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="IoF-wu-JTn"/>
-                            <constraint firstItem="D2h-Tl-eLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZT9-56-kqh"/>
                             <constraint firstItem="VSK-Wh-6h9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dnF-a8-rs6"/>
-                            <constraint firstItem="D2h-Tl-eLK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="esi-ce-uDH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="zL4-z6-zU6"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="D2h-Tl-eLK" id="VTh-Ss-uEi"/>
                         <outlet property="passwordTextField" destination="tk5-kk-IH0" id="fwp-ds-kwe"/>
                         <outlet property="userTextField" destination="Dlv-45-0G3" id="oid-x1-iNa"/>
                         <segue destination="7dX-TE-Hve" kind="show" identifier="Moments" id="O8U-Ga-bkw"/>
@@ -296,16 +292,11 @@
                                     <constraint firstItem="IxN-LO-1eN" firstAttribute="width" secondItem="UqU-UY-Bqa" secondAttribute="width" id="oaZ-is-bN2"/>
                                 </constraints>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WVV-wh-ISf">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WVV-wh-ISf" firstAttribute="centerY" secondItem="XMt-8Z-V3a" secondAttribute="centerY" id="0LJ-nK-ZmB"/>
                             <constraint firstItem="qJW-yD-q1M" firstAttribute="centerY" secondItem="XMt-8Z-V3a" secondAttribute="centerY" id="3Ka-Hi-Sv9"/>
                             <constraint firstItem="qJW-yD-q1M" firstAttribute="centerX" secondItem="XMt-8Z-V3a" secondAttribute="centerX" id="JTj-U1-4FM"/>
-                            <constraint firstItem="WVV-wh-ISf" firstAttribute="centerX" secondItem="XMt-8Z-V3a" secondAttribute="centerX" id="fha-dV-L0n"/>
                             <constraint firstItem="ata-9f-dvp" firstAttribute="top" secondItem="YUA-jk-DLR" secondAttribute="top" id="gc4-ym-d3c"/>
                             <constraint firstItem="ata-9f-dvp" firstAttribute="leading" secondItem="YUA-jk-DLR" secondAttribute="leading" id="sX7-bo-4tI"/>
                             <constraint firstItem="ata-9f-dvp" firstAttribute="trailing" secondItem="YUA-jk-DLR" secondAttribute="trailing" id="xn5-gA-C5Q"/>
@@ -313,7 +304,6 @@
                         <viewLayoutGuide key="safeArea" id="YUA-jk-DLR"/>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="WVV-wh-ISf" id="o0P-pZ-ZOA"/>
                         <outlet property="emailTextField" destination="UqU-UY-Bqa" id="jds-Pb-ami"/>
                         <outlet property="passwordTextField" destination="VUp-bL-Wki" id="y1z-qd-ciH"/>
                         <outlet property="repeatPasswordTextField" destination="IxN-LO-1eN" id="wQa-QR-VEO"/>
