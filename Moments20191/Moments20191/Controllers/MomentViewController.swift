@@ -17,6 +17,10 @@ class MomentViewController: UIViewController {
     @IBOutlet weak var momentImageView: UIImageView!
     @IBOutlet weak var momentTextView: UITextView!
     
+    // MARK: - Properties
+    var userManager: UserManager?
+    var moment: Moment?
+    
     // MARK: - IBActions
     
     @IBAction func deleteMoment(_ sender: Any) {
@@ -28,7 +32,7 @@ class MomentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
 
@@ -41,5 +45,13 @@ class MomentViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func setupViews() {
+        guard let moment = moment else {
+            return
+        }
+        
+        dateLabel.text = moment.date.stringFromDate()
+    }
 
 }

@@ -58,6 +58,7 @@ struct K {
         static let signIn = "Sign In"
         static let createMoment = "Create Moment"
         static let moment = "Moment"
+        static let important = "IMPORTANT!"
     }
     
     // MARK: - AlertActions
@@ -74,6 +75,7 @@ struct K {
         static let someWentWrong = "Something went wrong. Try Again!"
         static let allFieldsAreRequired = "All fields are required!"
         static let messageDeleteMoment = "Are you sure that you want to delete?"
+        static let requiredCamera = "Camera access requiered for capturing photos"
     }
     
 }
