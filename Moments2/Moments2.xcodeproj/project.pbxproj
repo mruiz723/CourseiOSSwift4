@@ -7,21 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		597A7ACCCB417020038E4782 /* Pods_Moments2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68AD84F0A0BCDC940F0BE6C /* Pods_Moments2.framework */; };
+		AC39202C23A06210001BA90D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39202B23A06210001BA90D /* SignInViewController.swift */; };
+		AC39202F23A06241001BA90D /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39202E23A06241001BA90D /* SignOutViewController.swift */; };
+		AC39203123A06251001BA90D /* MomentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39203023A06251001BA90D /* MomentsTableViewController.swift */; };
+		AC39203323A06260001BA90D /* NewMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39203223A06260001BA90D /* NewMomentViewController.swift */; };
+		AC39203523A0626A001BA90D /* MomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39203423A0626A001BA90D /* MomentViewController.swift */; };
+		AC39203723A07C78001BA90D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC39203623A07C78001BA90D /* GoogleService-Info.plist */; };
+		AC39203923A08422001BA90D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39203823A08422001BA90D /* User.swift */; };
+		AC39203C23A085C1001BA90D /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39203B23A085C1001BA90D /* Moment.swift */; };
+		AC39203E23A08A0C001BA90D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39203D23A08A0C001BA90D /* Constants.swift */; };
+		AC39204123A08D96001BA90D /* AlertViewController+PresentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39204023A08D96001BA90D /* AlertViewController+PresentAlert.swift */; };
+		AC39204423A08DB7001BA90D /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39204323A08DB7001BA90D /* Date+Format.swift */; };
+		AC39204623A08EA3001BA90D /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39204523A08EA3001BA90D /* MomentCell.swift */; };
 		ACA965F52399D28300BC6FE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA965F42399D28300BC6FE5 /* AppDelegate.swift */; };
-		ACA965F72399D28300BC6FE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA965F62399D28300BC6FE5 /* ViewController.swift */; };
 		ACA965FA2399D28300BC6FE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA965F82399D28300BC6FE5 /* Main.storyboard */; };
 		ACA965FC2399D28500BC6FE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA965FB2399D28500BC6FE5 /* Assets.xcassets */; };
 		ACA965FF2399D28500BC6FE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA965FD2399D28500BC6FE5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E75EBF30D2931183EEADCE /* Pods-Moments2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moments2/Pods-Moments2.release.xcconfig"; sourceTree = "<group>"; };
+		74EDEDF486FD5ACD0B1A9BEA /* Pods-Moments2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moments2/Pods-Moments2.debug.xcconfig"; sourceTree = "<group>"; };
+		AC39202B23A06210001BA90D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		AC39202E23A06241001BA90D /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		AC39203023A06251001BA90D /* MomentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsTableViewController.swift; sourceTree = "<group>"; };
+		AC39203223A06260001BA90D /* NewMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMomentViewController.swift; sourceTree = "<group>"; };
+		AC39203423A0626A001BA90D /* MomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentViewController.swift; sourceTree = "<group>"; };
+		AC39203623A07C78001BA90D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC39203823A08422001BA90D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC39203B23A085C1001BA90D /* Moment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		AC39203D23A08A0C001BA90D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC39204023A08D96001BA90D /* AlertViewController+PresentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertViewController+PresentAlert.swift"; sourceTree = "<group>"; };
+		AC39204323A08DB7001BA90D /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		AC39204523A08EA3001BA90D /* MomentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentCell.swift; sourceTree = "<group>"; };
 		ACA965F12399D28300BC6FE5 /* Moments2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA965F42399D28300BC6FE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACA965F62399D28300BC6FE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACA965F92399D28300BC6FE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACA965FB2399D28500BC6FE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACA965FE2399D28500BC6FE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA966002399D28500BC6FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B68AD84F0A0BCDC940F0BE6C /* Pods_Moments2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moments2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +55,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597A7ACCCB417020038E4782 /* Pods_Moments2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72FFE933E65B36755668C606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B68AD84F0A0BCDC940F0BE6C /* Pods_Moments2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC39202D23A06224001BA90D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC39202B23A06210001BA90D /* SignInViewController.swift */,
+				AC39202E23A06241001BA90D /* SignOutViewController.swift */,
+				AC39203023A06251001BA90D /* MomentsTableViewController.swift */,
+				AC39203223A06260001BA90D /* NewMomentViewController.swift */,
+				AC39203423A0626A001BA90D /* MomentViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC39203A23A0842A001BA90D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC39203823A08422001BA90D /* User.swift */,
+				AC39203B23A085C1001BA90D /* Moment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC39203F23A08D6B001BA90D /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				AC39203D23A08A0C001BA90D /* Constants.swift */,
+				AC39204223A08D9E001BA90D /* Extensions */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		AC39204223A08D9E001BA90D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC39204023A08D96001BA90D /* AlertViewController+PresentAlert.swift */,
+				AC39204323A08DB7001BA90D /* Date+Format.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ACA965E82399D28300BC6FE5 = {
 			isa = PBXGroup;
 			children = (
 				ACA965F32399D28300BC6FE5 /* Moments2 */,
 				ACA965F22399D28300BC6FE5 /* Products */,
+				BBBC650B74365A852B5526D3 /* Pods */,
+				72FFE933E65B36755668C606 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +130,27 @@
 		ACA965F32399D28300BC6FE5 /* Moments2 */ = {
 			isa = PBXGroup;
 			children = (
+				AC39203623A07C78001BA90D /* GoogleService-Info.plist */,
 				ACA965F42399D28300BC6FE5 /* AppDelegate.swift */,
-				ACA965F62399D28300BC6FE5 /* ViewController.swift */,
 				ACA965F82399D28300BC6FE5 /* Main.storyboard */,
 				ACA965FB2399D28500BC6FE5 /* Assets.xcassets */,
 				ACA965FD2399D28500BC6FE5 /* LaunchScreen.storyboard */,
 				ACA966002399D28500BC6FE5 /* Info.plist */,
+				AC39202D23A06224001BA90D /* Controllers */,
+				AC39203A23A0842A001BA90D /* Models */,
+				AC39203F23A08D6B001BA90D /* Commons */,
+				AC39204523A08EA3001BA90D /* MomentCell.swift */,
 			);
 			path = Moments2;
+			sourceTree = "<group>";
+		};
+		BBBC650B74365A852B5526D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74EDEDF486FD5ACD0B1A9BEA /* Pods-Moments2.debug.xcconfig */,
+				02E75EBF30D2931183EEADCE /* Pods-Moments2.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACA966032399D28500BC6FE5 /* Build configuration list for PBXNativeTarget "Moments2" */;
 			buildPhases = (
+				468ADB88E418773F27FE79A5 /* [CP] Check Pods Manifest.lock */,
 				ACA965ED2399D28300BC6FE5 /* Sources */,
 				ACA965EE2399D28300BC6FE5 /* Frameworks */,
 				ACA965EF2399D28300BC6FE5 /* Resources */,
+				0E226FB3237650EFD8754B72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +187,7 @@
 				TargetAttributes = {
 					ACA965F02399D28300BC6FE5 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -123,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA965FF2399D28500BC6FE5 /* LaunchScreen.storyboard in Resources */,
+				AC39203723A07C78001BA90D /* GoogleService-Info.plist in Resources */,
 				ACA965FC2399D28500BC6FE5 /* Assets.xcassets in Resources */,
 				ACA965FA2399D28300BC6FE5 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +223,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E226FB3237650EFD8754B72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Moments2/Pods-Moments2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moments2/Pods-Moments2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		468ADB88E418773F27FE79A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moments2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ACA965ED2399D28300BC6FE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA965F72399D28300BC6FE5 /* ViewController.swift in Sources */,
+				AC39202C23A06210001BA90D /* SignInViewController.swift in Sources */,
+				AC39202F23A06241001BA90D /* SignOutViewController.swift in Sources */,
+				AC39203523A0626A001BA90D /* MomentViewController.swift in Sources */,
+				AC39203123A06251001BA90D /* MomentsTableViewController.swift in Sources */,
 				ACA965F52399D28300BC6FE5 /* AppDelegate.swift in Sources */,
+				AC39203323A06260001BA90D /* NewMomentViewController.swift in Sources */,
+				AC39204423A08DB7001BA90D /* Date+Format.swift in Sources */,
+				AC39204623A08EA3001BA90D /* MomentCell.swift in Sources */,
+				AC39204123A08D96001BA90D /* AlertViewController+PresentAlert.swift in Sources */,
+				AC39203923A08422001BA90D /* User.swift in Sources */,
+				AC39203C23A085C1001BA90D /* Moment.swift in Sources */,
+				AC39203E23A08A0C001BA90D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +426,10 @@
 		};
 		ACA966042399D28500BC6FE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74EDEDF486FD5ACD0B1A9BEA /* Pods-Moments2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Moments2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -290,6 +438,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.edu.eafit.mruiz723.Moments2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -297,8 +446,10 @@
 		};
 		ACA966052399D28500BC6FE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E75EBF30D2931183EEADCE /* Pods-Moments2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Moments2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
