@@ -13,6 +13,10 @@ struct K {
     // MARK: - Generics
     
     static let json = "json"
+    static let moment = "moment"
+    static let error = "error"
+    static let user = "user"
+    static let moments = "moments"
     
     // MARK: - Segues
     
@@ -76,5 +80,10 @@ struct K {
         static let allFieldsAreRequired = "All fields are required!"
         static let messageDeleteMoment = "Are you sure that you want to delete?"
         static let requiredCamera = "Camera access requiered for capturing photos"
+    }
+
+    struct Error {
+        static let failedSignIn = "Failed Sign in"
+        static let malformedResponse = "Malformed data received"
     }
 }

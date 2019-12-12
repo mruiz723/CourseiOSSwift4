@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A3136C23A2888100909428 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A3136B23A2888100909428 /* APIClient.swift */; };
 		597A7ACCCB417020038E4782 /* Pods_Moments2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68AD84F0A0BCDC940F0BE6C /* Pods_Moments2.framework */; };
 		AC39202C23A06210001BA90D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39202B23A06210001BA90D /* SignInViewController.swift */; };
 		AC39202F23A06241001BA90D /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC39202E23A06241001BA90D /* SignOutViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		02E75EBF30D2931183EEADCE /* Pods-Moments2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moments2/Pods-Moments2.release.xcconfig"; sourceTree = "<group>"; };
+		09A3136B23A2888100909428 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		74EDEDF486FD5ACD0B1A9BEA /* Pods-Moments2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moments2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moments2/Pods-Moments2.debug.xcconfig"; sourceTree = "<group>"; };
 		AC39202B23A06210001BA90D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		AC39202E23A06241001BA90D /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				AC39203A23A0842A001BA90D /* Models */,
 				AC39203F23A08D6B001BA90D /* Commons */,
 				AC39204523A08EA3001BA90D /* MomentCell.swift */,
+				09A3136B23A2888100909428 /* APIClient.swift */,
 			);
 			path = Moments2;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				AC39204423A08DB7001BA90D /* Date+Format.swift in Sources */,
 				AC39204623A08EA3001BA90D /* MomentCell.swift in Sources */,
 				AC39204123A08D96001BA90D /* AlertViewController+PresentAlert.swift in Sources */,
+				09A3136C23A2888100909428 /* APIClient.swift in Sources */,
 				AC39203923A08422001BA90D /* User.swift in Sources */,
 				AC39203C23A085C1001BA90D /* Moment.swift in Sources */,
 				AC39203E23A08A0C001BA90D /* Constants.swift in Sources */,

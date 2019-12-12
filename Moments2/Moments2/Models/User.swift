@@ -8,25 +8,25 @@
 
 import Foundation
 
-class User: NSObject {
+class UserManager: NSObject {
     
     // MARK: - Properties
     
-    var user: String
+    var email: String
     var password: String
     
     // MARK: - Init
     
-    init(user: String, password: String) {
-        self.user = user
+    init(email: String, password: String) {
+        self.email = email
         self.password = password
     }
     
-    func signIn() {
+    func signIn(completionHandler: @escaping CompletionHandler) {
         
     }
     
-    func signOut() {
+    func signOut(completionHandler: @escaping CompletionHandler) {
         
     }
     
