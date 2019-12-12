@@ -37,7 +37,11 @@ class SignOutViewController: UIViewController {
     
     //MARK: IBActions
     
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+
     @IBAction func signOut(_ sender: Any) {
-        
+
     }
 }
