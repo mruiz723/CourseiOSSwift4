@@ -21,7 +21,7 @@ struct K {
     // MARK: - Segues
     
     struct Segue {
-        static let signOut = "SignOut"
+        static let signUp = "SignUp"
         static let moments = "Moments"
         static let moment = "Moment"
         static let newMoment = "NewMoment"
@@ -58,7 +58,7 @@ struct K {
     // MARK: - AlertTitle
     
     struct AlertTitle {
-        static let signOut = "Sign Out"
+        static let signUp = "Sign Up"
         static let signIn = "Sign In"
         static let createMoment = "Create Moment"
         static let moment = "Moment"
@@ -83,7 +83,8 @@ struct K {
     }
 
     struct Error {
-        static let failedSignIn = "Failed Sign in"
+        static let failedSignIn = "Failed Sign In"
+        static let failedSignUp = "Failed Sign Up"
         static let malformedResponse = "Malformed data received"
     }
 }

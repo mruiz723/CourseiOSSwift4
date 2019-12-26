@@ -14,7 +14,7 @@ typealias CompletionHandler = ([String: Any]) -> Void
 
 struct APIClient {
 
-    static func SignIn(email: String, password: String, completionHandler: @escaping CompletionHandler) {
+    static func signIn(email: String, password: String, completionHandler: @escaping CompletionHandler) {
         Auth.auth().signIn(withEmail: email, password: password) { authDataResult, error in
             guard let authDataResult = authDataResult else {
                 completionHandler([K.error: error ?? K.Error.failedSignIn])
@@ -24,10 +24,10 @@ struct APIClient {
         }
     }
 
-    static func SignOut(email: String, password: String, completionHandler: @escaping CompletionHandler) {
+    static func signUp(email: String, password: String, completionHandler: @escaping CompletionHandler) {
         Auth.auth().createUser(withEmail: email, password: password) { authDataResult, error in
             guard let authDataResult = authDataResult else {
-                completionHandler([K.error: error ?? K.Error.failedSignIn])
+                completionHandler([K.error: error ?? K.Error.failedSignUp])
                 return
             }
             completionHandler([K.user: authDataResult.user])
@@ -35,7 +35,7 @@ struct APIClient {
     }
 
     static func newMoment(params: [String: Any], accessToken: String, completionHandler: @escaping CompletionHandler) {
-        let URL = "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments)\(K.json)?\(K.APIParameterKey.auth)=\(accessToken)"
+        let URL = "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments).\(K.json)?\(K.APIParameterKey.auth)=\(accessToken)"
         Alamofire.request(URL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: [:]).validate().responseJSON { response in
             guard response.result.isSuccess else {
                 completionHandler([K.error: response.error ?? K.Message.someWentWrong])
@@ -51,11 +51,28 @@ struct APIClient {
         }
     }
 
+    static func deleteMoment(idMoment: String,
+                             accessToken: String,
+                             completionHandler: @escaping CompletionHandler) {
+        let URL = "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments)/\(idMoment).\(K.json)?auth=\(accessToken)"
+        Alamofire.request(URL, method: .delete, parameters: [:],
+                          encoding: JSONEncoding.default,
+                          headers: [:]).validate().responseJSON { response in
+                            guard response.result.isSuccess else {
+                                completionHandler([K.error: response.error ?? K.Message.someWentWrong])
+                                return
+                            }
+
+                            completionHandler([K.moment: ""])
+
+        }
+    }
+
     static func moments(token: String, completionHandler: @escaping CompletionHandler) {
         let defaultSession = URLSession(configuration: .default)
         var dataTask: URLSessionDataTask?
 
-        guard let urlComponents = URLComponents(string: "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments).\(K.json)"), let url = urlComponents.url else {
+        guard let urlComponents = URLComponents(string: "\(K.ProductionServer.baseURL)\(K.ProductionServer.moments).\(K.json)?\(K.APIParameterKey.auth)=\(token)"), let url = urlComponents.url else {
             completionHandler([K.error: K.Message.someWentWrong])
             return
         }

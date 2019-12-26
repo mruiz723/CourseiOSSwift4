@@ -29,21 +29,56 @@ class Moment: NSObject {
     }
     
     // MARK: - Class Methods
-    
-    func createMoment() {
-        
+
+    static func newMoment(params: [String: Any],
+                          accessToken: String,
+                          completionHandler: @escaping CompletionHandler) {
+        APIClient.newMoment(params: params, accessToken: accessToken) { (response) in
+            completionHandler(response)
+        }
     }
-    
-    func moments(){
-        
+
+    static func deleteMoment(idMoment: String,
+                             accessToken: String,
+                             completionHandler: @escaping CompletionHandler) {
+        APIClient.deleteMoment(idMoment: idMoment, accessToken: accessToken) { response in
+            completionHandler(response)
+        }
     }
-    
-    func deleteMoment() {
-        
-    }
-    
-    func updateMoment() {
-        
+
+    static func moments(token: String,completionHandler: @escaping CompletionHandler) {
+        APIClient.moments(token: token) { (response) in
+            guard let data = response["moments"] as? [String: Any] else{
+                completionHandler(response)
+                return
+            }
+
+            var moments = [Moment]()
+
+            for (key, value) in data {
+                guard let item = value as? [String: Any] else {
+                    completionHandler(response)
+                    return
+                }
+
+                guard let timeStampString = item["date"] as? String,
+                    let timeStamp = Double(timeStampString),
+                    let title = item["title"] as? String,
+                    let imagePath = item["imagePath"] as? String,
+                    let descriptionMoment = item["descriptionMoment"] as? String,
+                    let createdBy = item["createdBy"] as? String
+                    else {
+                        completionHandler(["error": "Malformed data received"])
+                        return
+                }
+
+                let date = Date(timeIntervalSince1970: timeStamp)
+                let moment = Moment(idMoment: key, date: date, imagePath: imagePath, descriptionMoment:descriptionMoment, createdBy: createdBy, title: title)
+                moments.append(moment)
+            }
+
+            completionHandler(["moments": moments])
+        }
     }
     
 }

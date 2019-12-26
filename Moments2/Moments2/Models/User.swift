@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class UserManager: NSObject {
     
@@ -14,20 +15,38 @@ class UserManager: NSObject {
     
     var email: String
     var password: String
+    var user: User?
     
     // MARK: - Init
     
-    init(email: String, password: String) {
+    init(email: String, password: String, user: User? = nil) {
         self.email = email
         self.password = password
+        self.user = user
     }
     
-    func signIn(completionHandler: @escaping CompletionHandler) {
-        
+    static func signIn(email: String, password: String, completionHandler: @escaping CompletionHandler) {
+        APIClient.signIn(email: email, password: password) { (response) in
+            guard let user = response[K.user] as? User else {
+                completionHandler(response)
+                return
+            }
+
+            let userManager = UserManager(email: email, password: password, user: user)
+            completionHandler([K.user: userManager])
+        }
     }
     
-    func signOut(completionHandler: @escaping CompletionHandler) {
-        
+    static func signUp(email: String, password: String, completionHandler: @escaping CompletionHandler) {
+        APIClient.signUp(email: email, password: password) { response in
+            guard let user = response[K.user] as? User else {
+                completionHandler(response)
+                return
+            }
+
+            let userManager = UserManager(email: email, password: password, user: user)
+            completionHandler([K.user: userManager])
+        }
     }
     
 }
